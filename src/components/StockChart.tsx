@@ -33,7 +33,7 @@ export default function StockChart({ tab = "monthly" }: { tab?: string }) {
           <XAxis dataKey="month" />
           <YAxis
             yAxisId="left"
-            tickFormatter={(v) => `${Math.round(v / 1e6)}M`}
+            tickFormatter={(v: number) => `${Math.round(v / 1e6)}M`}
             domain={["auto", "auto"]}
             axisLine={false}
             tickLine={false}
@@ -43,7 +43,7 @@ export default function StockChart({ tab = "monthly" }: { tab?: string }) {
             yAxisId="right"
             orientation="right"
             domain={["auto", "auto"]}
-            tickFormatter={(v) => `${v}%`}
+            tickFormatter={(v: number) => `${v}%`}
             axisLine={false}
             tickLine={false}
             width={40}
@@ -55,7 +55,7 @@ export default function StockChart({ tab = "monthly" }: { tab?: string }) {
               if (name === "yoy") return [`${value}%`, "年增率"];
               return [value, name];
             }}
-            labelFormatter={(label) => `${label}`}
+            labelFormatter={(label: string) => `${label}`}
           />
           <Legend />
           {/* 主Y轴（左）：每月營收 */}

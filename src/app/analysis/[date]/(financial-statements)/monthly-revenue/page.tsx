@@ -9,8 +9,16 @@ import StockChart from "@/components/StockChart";
 import DataTabs from "@/components/DataTabs";
 import StockTable from "@/components/StockTable";
 import { useState } from "react";
+import { useStockInfoStore } from "@/store/useStockInfoStore";
+import { useStockInfo } from "@/hooks/useStockInfoHook";
+import type { IStockInterface } from "@/store/useStockInfoStore";
 
 export default function Page() {
+  const stockId = useStockInfoStore((state) => state.stockId);
+  const stockInfo: IStockInterface = useStockInfoStore(
+    (state) => state.stockInfo
+  );
+  useStockInfo(stockId);
   const [chartTab, setChartTab] = useState("monthly");
   const [dataTab, setDataTab] = useState("detail");
 
@@ -18,7 +26,7 @@ export default function Page() {
     <div className="p-6 max-w-4xl mx-auto bg-gray-50 min-h-screen">
       {/* 头部 卡片 */}
       <Card>
-        <StockHeader />
+        <StockHeader {...stockInfo} />
       </Card>
       {/* 图表 卡片 */}
       <Card>
