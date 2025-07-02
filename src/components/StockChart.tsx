@@ -21,7 +21,7 @@ const monthlyData = [
 
 export default function StockChart({ tab = "monthly" }: { tab?: string }) {
   // 你可以扩展不同tab的数据和折线内容
-  const data = monthlyData;
+  const data = tab === "monthly" ? monthlyData : [];
   return (
     <div className="h-[340px] w-full px-3 py-2">
       <ResponsiveContainer width="100%" height="100%">
