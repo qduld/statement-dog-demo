@@ -34,3 +34,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Project Struct
+
+public 静态资源
+src
+├─app
+│ ├─analysis 路由
+│ │ └─[stock-id] 对应股票 ID
+│ │ ├─(financial-statements) 界面左侧导航栏对应范畴
+│ │ │ └─monthly-revenue 导航到左侧子导航栏对应路由
+│ │ └─(profitability) 界面左侧导航栏对应范畴
+│ └─api
+│ └─proxy 本地 cors 代理
+├─components 组件
+│ └─common
+├─hooks
+├─store
+├─styles
+└─utils
