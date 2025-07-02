@@ -37,19 +37,21 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Project Struct
 
-public/ # 静态资源文件
+```
+public/               # 静态资源文件
 src/
-├─app/ # 应用程序路由和页面
-│ ├─analysis/ # 分析页面路由
-│ │ └─[stock-id]/ # 动态路由，对应股票 ID
-│ │ ├─(financial-statements)/ # 界面左侧导航栏：财务报表范畴
-│ │ │ └─monthly-revenue/ # 子导航栏：月度营收
-│ │ └─(profitability)/ # 界面左侧导航栏：盈利能力范畴
-│ └─api/ # API 路由
-│ └─proxy/ # 本地 CORS 代理
-├─components/ # 可复用组件
-│ └─common/ # 公共组件
-├─hooks/ # 自定义 Hook
-├─store/ # 全局状态管理
-├─styles/ # 样式文件
-└─utils/ # 工具函数
+├─app/                # 应用程序路由和页面
+│ ├─analysis/         # 分析页面路由
+│ │ └─[stock-id]/     # 动态路由，对应股票 ID
+│ │   ├─(financial-statements)/  # 界面左侧导航栏：财务报表范畴
+│ │   │ └─monthly-revenue/       # 子导航栏：月度营收
+│ │   └─(profitability)/         # 界面左侧导航栏：盈利能力范畴
+│ └─api/              # API 路由
+│   └─proxy/          # 本地 CORS 代理
+├─components/         # 可复用组件
+│ └─common/           # 公共组件
+├─hooks/              # 自定义 Hook
+├─store/              # 全局状态管理
+├─styles/             # 样式文件
+└─utils/              # 工具函数
+```
